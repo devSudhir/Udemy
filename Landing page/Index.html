@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Udemy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link rel="stylesheet" href="../CSS/popup.css">
+  <link rel="stylesheet" href="../CSS/categories.css">
+  <link rel="stylesheet" href="../CSS/index.css">
+  <!-- <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script> -->
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <button onclick="showfirst()" id="dropdownbtn"><i class="fas fa-bars fa-2x"></i></button>
+      <!-- <a id="dropdownbtn" onclick="showfirst(event)" ><i  class="fas fa-bars fa-2x"></i></a> -->
+      <div id="overlay">
+        <div id="first">
+          <div id="subfirst1">
+            <a href="../Login/login.html">Log In</a>
+            <a href="../SignUp/signUp.html">Sign Up</a>
+          </div>
+          <hr />
+          <h3>Most Popular</h3>
+          <div id="subfirst2">
+
+          </div>
+          <hr />
+          <h3>More from Udemy</h3>
+          <div id="subfirst3">
+
+            <a href="#">Udemy for Business</a>
+            <a href="#">Get the app</a>
+            <a href="#">Invite friends</a>
+            <a href="#">Help</a>
+            <button>English</button>
+          </div>
+        </div>
+        <div id="second"></div>
+        <div id="closebtn" class="setZ">
+          <button>
+            <i class="fa fa-times-circle fa-3x"></i>
+          </button>
+        </div>
+      </div>
+      <div class="logo"><a href="index.html">
+        <img class="udemyLogo cursorPointer" src="https://www.udemy.com/staticx/udemy/images/v6/logo-coral.svg"
+          alt="Udemy logo" /></a>
+      </div>
+      <div class="firstSection">
+        <ul>
+          <li><a onmouseover="showCategoriesList()" class="navText" href="#">Categories</a></li>
+          <li>
+            <div class="searchContainer">
+              <button class="searchButton cursorPointer">
+                <i class="fa fa-search searchIcon"></i>
+              </button>
+              <input class="searchBox" type="search" name="search" placeholder="Search for anything" />
+            </div>
+          </li>
+          <li class="navText1 hello">
+            <a class="navText dropdown" href="../Additional Pages/udemy-Copy.html">
+              <div>Udemy for Business</div><span class="dropdown-content"><b>Get your team access to over 5,500 top
+                  Udemy courses, anytime, anywhere.</b>
+                <div><button><b>Try Udemy for Business</b></button></div>
+              </span>
+            </a>
+          <li class="navText2 hello">
+            <a class="navText dropdown" href="../Additional Pages/techOnUdemy.html">
+              <div>Teach On Udemy</div><span class="dropdown-content"><b>Turn what you know into an opportunity and
+                  reach millions around the world.</b>
+                <div><button><b>Learn more</b></button></div>
+              </span>
+            </a>
+
+        </ul>
+      </div>
+      <div class="secondSection">
+        <ul>
+          <li>
+            <a  onclick="showCart()" class="cartBtn cursorPointer">
+              <img class="cartIcon" src="https://image.flaticon.com/icons/png/128/628/628556.png" alt="cart" />
+            </a>
+            <span id="noOfCartItems"></span>
+          </li>
+          <li>
+            <a href="../Login/login.html"><button class="btn-medium btn-hover1 cursorPointer">
+                Log in
+              </button></a>
+          </li>
+          <li>
+            <a href="../SignUp/signUp.html"><button class="btn-medium btn-bgcolor btn-hover2 cursorPointer">
+                Sign Up
+              </button></a>
+          </li>
+          <li>
+            <button class="btn-medium langIconbtn cursorPointer">
+              <img src="https://image.flaticon.com/icons/png/128/591/591788.png" alt="language logo" />
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="smallWindow">
+        <button class="searchButton cursorPointer">
+          <i class="fa fa-search searchIcon"></i>
+        </button>
+        <button class="cartBtn cursorPointer">
+          <img class="cartIcon" src="https://image.flaticon.com/icons/png/128/628/628556.png" alt="cart" />
+        </button>
+      </div>
+    </nav>
+  </header>
+  <div id="parent_div" class="show_all_list_items">
+    <ul>
+      <li onmouseover="showChildList(0)"><a href="#">Development</a></li>
+      <li onmouseover="showChildList(1)"><a href="#">Business</a></li>
+      <li onmouseover="showChildList(2)"><a href="#">Finance & Accounting</a></li>
+      <li onmouseover="showChildList(3)"><a href="#">IT & Software</a></li>
+      <li onmouseover="showChildList(4)"><a href="#">Office Productivity</a></li>
+      <li onmouseover="showChildList(5)"><a href="#">Personal Development</a></li>
+      <li onmouseover="showChildList(6)"><a href="#">Design</a></li>
+      <li onmouseover="showChildList(7)"><a href="#">Marketing</a></li>
+      <li onmouseover="showChildList(8)"><a href="#">Lifestyle</a></li>
+      <li onmouseover="showChildList(9)"><a href="#">Photography& Video</a></li>
+      <li onmouseover="showChildList(10)"><a href="#">Health and Fitness</a></li>
+      <li onmouseover="showChildList(11)"><a href="#">Music</a></li>
+      <li onmouseover="showChildList(12)"><a href="#">Teaching</a></li>
+      <li onmouseover="showChildList(13)"><a href="#">Academics</a></li>
+    </ul>
+  </div>
+  <div id="child_div" class="show_all_list_items">
+  </div>
+  <div id="grandChild_div" class="show_all_list_items">
+  </div>
+  <section>
+    <div class="container">
+      <div class="bgimage"></div>
+      <div class="searchContent">
+        <div><span>Dream up</span></div>
+        <div>
+          <span>Ambition accepted. Learn the latest skills to reach your
+            professional goals.</span>
+        </div>
+        <div class="searchBox2">
+          <input type="search" placeholder="What do you want to learn?" />
+          <button>
+            <img src="https://image.flaticon.com/icons/png/512/482/482631.png" alt="search logo" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="courseBox">
+      <div class="textContent">
+        <div>
+          <h1>The world's largest selection of courses</h1>
+        </div>
+        <div>
+          <span>Choose from 155,000 online video courses with new additions
+            published every month</span>
+        </div>
+      </div>
+      <div class="coursesSlider">
+        <div>
+          <ul id="linkList">
+            <li><button onclick="showPython()">Python</button></li>
+            <li><button>Excel</button></li>
+            <li><button onclick="showWebdevelopment()">Web Development</button></li>
+            <li><button>JavaScript</button></li>
+            <li><button>Data Science</button></li>
+            <li><button>AWS Certification</button></li>
+            <li><button>Drawing</button></li>
+          </ul>
+        </div>
+        <div class="slideCourses">
+          <!-- <div class="pythonSlider" >
+              <div class="upperContentSlider">
+                <div>
+                  <h1>Expand your career opportunities with Python</h1>
+                  <p>
+                    Whether you work in machine learning or finance, or are
+                    pursuing a career in web development or data science, Python
+                    is one of the most important skills you can learn. Python's
+                    simple syntax is especially suited for desktop, web, and
+                    business application
+                  </p>
+                  <button>Explore Python</button>
+                </div>
+                <div>
+                  <img
+                    src="https://s.udemycdn.com/topic-images/lohp-topic-banners/GettyImages-1166389425_opt.jpg"
+                    alt="womenLogo"
+                  />
+                </div>
+              </div>
+             <div id="main" ><!-- onmouseout="disablepopupAddToCart()" -->
+          <!-- <button onclick="plusSlides(-1)" href="#" class="previous round"
+              >&#8249;</button>
+            <div onmouseover="popupAddToCArt(0)"  class="slides fade"></div>
+            <div onmouseover="popupAddToCArt(1)"  class="slides fade"></div>
+            <div onmouseover="popupAddToCArt(2)"  class="slides fade"></div>
+            <div onmouseover="popupAddToCArt(3)"  class="slides fade"></div>
+            <div onmouseover="popupAddToCArt(4)"  class="slides fade"></div>            
+            <button onclick="plusSlides(1)" href="#" class="next round">&#8250;</button>
+          </div>
+          <div class="popup-div-addtocart"></div>
+          <div class="big-popup-before-addtocart" style="display: none;"></div>
+            </div>  -->
+        </div>
+      </div>
+    </div>
+    </div>
+    <div>
+      <div class="main-slider-2-hp">
+        <span>Students are viewing</span>
+        <div class="main-slider-students-view">
+          <button onclick="plusSlideStud(-1)" href="#" class="previous round">&#8249;</button>
+          <div onmouseover="popupAddToCArtBelow(0)" class="slides-2 fade-2"></div>
+          <div onmouseover="popupAddToCArtBelow(1)" class="slides-2 fade-2"></div>
+          <div onmouseover="popupAddToCArtBelow(2)" class="slides-2 fade-2"></div>
+          <div onmouseover="popupAddToCArtBelow(3)" class="slides-2 fade-2"></div>
+          <div onmouseover="popupAddToCArtBelow(4)" class="slides-2 fade-2"></div>
+          <button onclick="plusSlideStud(1)" href="#" class="next round">&#8250;</button>
+        </div>
+        <div class="popup-div-addtocart"></div>
+        <div id="black_overlay">
+          <div id="whitespace">
+            <div id="rightCrossButton">
+              <h2>Added to cart</h2>
+              <button id="close_black_overlay">&times;</button>
+            </div>
+
+            <div id="buy1">
+              <div id="tick">
+                <i class="fas fa-check-circle fa-2x" style="color: green"></i>
+              </div>
+
+              <div id="buy_one_course"></div>
+
+              <div id="buyBtn">
+                <a onclick="addOneItem()" href="../Cart/after_cart.html">Go to cart</a>
+              </div>
+            </div>
+
+            <div id="buy_two_course">
+              <h2>Frequently bought together</h2>
+
+              <div id="buy_two_course1"></div>
+
+              <div id="buy_two_course2"></div>
+
+              <div id="plusIcon">
+                <i class="fas fa-plus-circle fa-3x" style="color: #0f7c90"></i>
+              </div>
+
+              <div id="priceof2"></div>
+
+            </div>
+
+            <div id="related">
+              <h2>Related Topics</h2>
+              <a>Machine Learning</a>
+              <a>Data Science</a>
+              <a>JavaScript</a>
+              <a>Database</a>
+              <a>Django</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="main-slider-2-hp">
+        <span>Because you searched for Python</span>
+        <div class="main-slider-recommended">
+          <button onclick="plusSlideRecomm(-1)" href="#" class="previous round">&#8249;</button>
+          <div onmouseover="popupAddToCartRecomm(0)" class="slides-3 fade-3"></div>
+          <div onmouseover="popupAddToCartRecomm(1)" class="slides-3 fade-3"></div>
+          <div onmouseover="popupAddToCartRecomm(2)" class="slides-3 fade-3"></div>
+          <div onmouseover="popupAddToCartRecomm(3)" class="slides-3 fade-3"></div>
+          <div onmouseover="popupAddToCartRecomm(4)" class="slides-3 fade-3"></div>
+          <button onclick="plusSlideRecomm(1)" href="#" class="next round">&#8250;</button>
+        </div>
+        <div class="popup-div-addtocart"></div>
+        <div id="black_overlay">
+          <div id="whitespace">
+            <div id="rightCrossButton">
+              <h2>Added to cart</h2>
+              <button id="close_black_overlay">&times;</button>
+            </div>
+
+            <div id="buy1">
+              <div id="tick">
+                <i class="fas fa-check-circle fa-2x" style="color: green"></i>
+              </div>
+
+              <div id="buy_one_course"></div>
+
+              <div id="buyBtn">
+                <a onclick="addOneItem()" href="../Cart/after_cart.html">Go to cart</a>
+              </div>
+            </div>
+
+            <div id="buy_two_course">
+              <h2>Frequently bought together</h2>
+
+              <div id="buy_two_course1"></div>
+
+              <div id="buy_two_course2">
+
+              </div>
+
+              <div id="plusIcon">
+                <i class="fas fa-plus-circle fa-3x" style="color: #0f7c90"></i>
+              </div>
+
+              <div id="priceof2">
+
+              </div>
+            </div>
+            <div id="related">
+              <h2>Related Topics</h2>
+              <a>Machine Learning</a>
+              <a>Data Science</a>
+              <a>JavaScript</a>
+              <a>Database</a>
+              <a>Django</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="main-content">
+        <h3>Top Categories</h3>
+        <div id="topcourse">
+          <div class="subcourses">
+            <img src="https://s.udemycdn.com/home/top-categories/lohp-category-design.jpg" alt="" />
+            <span>Design</span>
+          </div>
+          <div class="subcourses">
+            <img src="https://s.udemycdn.com/home/top-categories/lohp-category-development.jpg" alt="" />
+            <span>Development</span>
+          </div>
+          <div class="subcourses">
+            <img src="https://s.udemycdn.com/home/top-categories/lohp-category-marketing.jpg" alt="" />
+            <span>Marketing</span>
+          </div>
+          <div class="subcourses">
+            <img src="https://s.udemycdn.com/home/top-categories/lohp-category-it-and-software.jpg" alt="" />
+            <span>IT and Software</span>
+          </div>
+          <div class="subcourses">
+            <img src="https://s.udemycdn.com/home/top-categories/lohp-category-personal-development.jpg" alt="" />
+            <span>Personal Development</span>
+          </div>
+          <div class="subcourses">
+            <img src="https://s.udemycdn.com/home/top-categories/lohp-category-business.jpg" alt="" />
+            <span>Business</span>
+          </div>
+          <div class="subcourses">
+            <img src="https://s.udemycdn.com/home/top-categories/lohp-category-photography.jpg" alt="" />
+            <span>Photography</span>
+          </div>
+          <div class="subcourses">
+            <img src="https://s.udemycdn.com/home/top-categories/lohp-category-music.jpg" alt="" />
+            <span>Music</span>
+          </div>
+        </div>
+      </div>
+      <div id="main-content-2">
+        <h1>Featured topics by category</h1>
+        <div id="linktocourses">
+          <div class="subparts">
+            <h3>Development</h3>
+            <div>
+              <a href="#">Python</a>
+              <p>27,538,900 students</p>
+            </div>
+            <div>
+              <a href="#">Web development</a>
+              <p>9,149,403 students</p>
+            </div>
+            <div>
+              <a href="#">Machine Learning</a>
+              <p>5,592,848 students</p>
+            </div>
+            <div>
+              <button>Explore More</button>
+            </div>
+          </div>
+          <div class="subparts">
+            <h3>Business</h3>
+            <div>
+              <a href="#">Financial Analysis</a>
+              <p>1,033,843 students</p>
+            </div>
+            <div>
+              <a href="#">SQL</a>
+              <p>4,033,751 students</p>
+            </div>
+            <div>
+              <a href="#">PMP</a>
+              <p>1,351,586 students</p>
+            </div>
+          </div>
+          <div class="subparts">
+            <h3>IT and software</h3>
+            <div>
+              <a href="#">AWS Certification</a>
+              <p>4,229,422 students</p>
+            </div>
+            <div>
+              <a href="#">Ethical Hacking</a>
+              <p>8,584,761 students</p>
+            </div>
+            <div>
+              <a href="#">Cyber Security</a>
+              <p>3,082,734 students</p>
+            </div>
+          </div>
+          <div class="subparts">
+            <h3>Design</h3>
+            <div>
+              <a href="#">Photoshop</a>
+              <p>9,327,671 students</p>
+            </div>
+            <div>
+              <a href="#">Graphic Designing</a>
+              <p>2,714,156 students</p>
+            </div>
+            <div>
+              <a href="#">Drawing</a>
+              <p>2,125,063 students</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="midSection">
+        <div class="headings">
+          <div class="image">
+            <img src="https://s.udemycdn.com/home/non-student-cta/udlite-lohp-promo-teacher.jpg" alt="" />
+          </div>
+          <div class="not">
+            <div class="contentBe">
+              <h1>Become an instructor</h1>
+              <div>
+                <p>
+                  Top instructors from around the world teach
+                  millions of students on Udemy. We provide the
+                  tools and skills to teach what you love.
+                </p>
+              </div>
+              <a href="#">Start teaching today</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="companies">
+        <h1>Trusted by companies of all sizes</h1>
+        <div id="logos">
+          <div class="logo">
+            <img src="https://s.udemycdn.com/partner-logos/booking-logo.svg" alt="" />
+          </div>
+          <div class="logo">
+            <img src="https://s.udemycdn.com/partner-logos/volkswagen-logo.svg" alt="" />
+          </div>
+          <div class="logo mercedesLogo">
+            <img src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-4-logo-png-transparent.png" alt="" />
+          </div>
+          <div class="logo">
+            <img src="https://s.udemycdn.com/partner-logos/adidas-logo.svg" alt="" />
+          </div>
+          <div class="logo">
+            <img src="https://s.udemycdn.com/partner-logos/eventbrite-logo.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="midSection belowSection">
+        <div class="headings headings2">
+          <div class="content content-2">
+            <h1>Udemy for Business</h1>
+            <p>
+              Get unlimited access to 5,500+ of Udemy’s top courses for your team.
+            </p>
+            <a href="#">Get Udemy for Business</a>
+          </div>
+          <div class="image-2">
+            <img src="https://s.udemycdn.com/home/non-student-cta/udlite-lohp-promo-ufb.jpg" alt="" />
+          </div>
+          <div></div>
+        </div>
+      </div>
+      <div id="youtube">
+        <div class="video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/QFIhEmOd6No" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="youtube_content">
+          <h1>
+            Transform your life
+            through education
+          </h1>
+          <p>
+            Mohamad Alaloush launched a new career in
+            software development by taking courses on Udemy. What will you
+            be able to do?
+          </p>
+        </div>
+      </div>
+      <div id="links">
+        <ul>
+          <li><a href="">Udemy for Business</a></li>
+          <li><a href="">Teach on Udemy</a></li>
+          <li><a href="">Get the app</a></li>
+          <li><a href="">About us</a></li>
+          <li><a href="">Contact us</a></li>
+        </ul>
+        <ul>
+          <li><a href="">Careers</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Help and support</a></li>
+          <li><a href="">Affiliate</a></li>
+        </ul>
+        <ul>
+          <li><a href="">Terms</a></li>
+          <li><a href="">Privacy Policy</a></li>
+          <li><a href="">Sitemap</a></li>
+          <li><a href="">Featured courses</a></li>
+        </ul>
+        <ul class="languageRight">
+          <div> <a href="" class="lang"> <img src="https://image.flaticon.com/icons/png/128/591/591788.png"
+                alt="language logo" />
+              English</a></div>
+
+      </div>
+
+  </section>
+  <footer>
+    <div class="logo">
+      <img class="udemyLogo cursorPointer" src="https://www.udemy.com/staticx/udemy/images/v6/logo-coral.svg"
+        alt="Udemy logo" />
+    </div>
+    <div>&copy;2021 Udemy Inc.</div>
+  </footer>
+</body>
+<script src="../Scripts/popup.js"></script>
+<script src="../Scripts/categories.js"></script>
+<script src="index.js"></script>
+</html>

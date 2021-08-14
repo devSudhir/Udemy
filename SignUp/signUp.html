@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+   <link rel="stylesheet" href="../CSS/signup.css">
+  <body>
+    <header>
+      <nav class="navbar">
+        <button onclick="showfirst()" id="dropdownbtn"><i class="fas fa-bars fa-2x"></i></button>
+        <!-- <a id="dropdownbtn" onclick="showfirst(event)" ><i  class="fas fa-bars fa-2x"></i></a> -->
+  
+        <div id="overlay">
+          <div id="first">
+            <div id="subfirst1">
+              <a href="../Login/login.html">Log In</a>
+              <a href="signup.html">Sign Up</a>
+            </div>
+            <hr />
+            <h3>Most Popular</h3>
+            <div id="subfirst2">
+  
+            </div>
+            <hr />
+            <h3>More from Udemy</h3>
+            <div id="subfirst3">
+  
+              <a href="#">Udemy for Business</a>
+              <a href="#">Get the app</a>
+              <a href="#">Invite friends</a>
+              <a href="#">Help</a>
+              <button>English</button>
+            </div>
+          </div>
+          <div id="second"></div>
+          <div id="closebtn" class="setZ">
+            <button>
+              <i class="far fa-times-circle fa-3x"></i>
+            </button>
+          </div>
+        </div>
+        <div class="logo"><a href="../Landing page/Index.html">
+          <img class="udemyLogo cursorPointer" src="https://www.udemy.com/staticx/udemy/images/v6/logo-coral.svg"
+            alt="Udemy logo" /></a>
+        </div>
+        <div class="firstSection">
+          <ul>
+            <li><a onmouseover="showCategoriesList()" class="navText" href="#">Categories</a></li>
+            <li>
+              <div class="searchContainer">
+                <button class="searchButton cursorPointer">
+                  <i class="fa fa-search searchIcon"></i>
+                </button>
+                <input class="searchBox" type="search" name="search" placeholder="Search for anything" />
+              </div>
+            </li>
+            <li class="navText1 hello">
+              <a class="navText dropdown" href="../Additional Pages/udemy-Copy.html">
+                <div>Udemy for Business</div><span class="dropdown-content"><b>Get your team access to over 5,500 top
+                    Udemy courses, anytime, anywhere.</b>
+                  <div><button><b>Try Udemy for Business</b></button></div>
+                </span>
+              </a>
+            <li class="navText2 hello">
+              <a class="navText dropdown" href="../Additional Pages/techOnUdemy.html">
+                <div>Teach On Udemy</div><span class="dropdown-content"><b>Turn what you know into an opportunity and
+                    reach millions around the world.</b>
+                  <div><button><b>Learn more</b></button></div>
+                </span>
+              </a>
+  
+          </ul>
+        </div>
+        <div class="secondSection">
+          <ul>
+            <li>
+              <button onclick="showCart()" class="cartBtn cursorPointer">
+                <img class="cartIcon" src="https://image.flaticon.com/icons/png/128/628/628556.png" alt="cart" />
+              </button>
+              <span id="noOfCartItems"></span>
+            </li>
+            <li>
+              <a href="../Login/login.html"><button class="btn-medium btn-hover1 cursorPointer">
+                  Log in
+                </button></a>
+            </li>
+            <li>
+              <a href="signUp.html"><button class="btn-medium btn-bgcolor btn-hover2 cursorPointer">
+                  Sign Up
+                </button></a>
+            </li>
+            <li>
+              <button class="btn-medium langIconbtn cursorPointer">
+                <img src="https://image.flaticon.com/icons/png/128/591/591788.png" alt="language logo" />
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="smallWindow">
+          <button class="searchButton cursorPointer">
+            <i class="fa fa-search searchIcon"></i>
+          </button>
+          <button class="cartBtn cursorPointer">
+            <img class="cartIcon" src="https://image.flaticon.com/icons/png/128/628/628556.png" alt="cart" />
+          </button>
+        </div>
+      </nav>
+    </header>
+    <div class="lContainer">
+      <div class="row"><b>Sign Up and Start Learning!</b></div>
+      <form action="/action_page.php">
+
+        <div class="input-container">
+            <i class="fa fa-user icon"></i>
+            <input
+              class="input-field"
+              type="text"
+              placeholder="Full Name"
+              name="fname"
+              required
+            />
+          </div>
+
+        <div class="input-container">
+          <i class="fa fa-envelope icon"></i>
+          <input
+            class="input-field"
+            type="email"
+            placeholder="Email"
+            name="email"
+            required
+          />
+        </div>
+
+        <div class="input-container">
+          <i class="fa fa-lock icon"></i>
+          <input onkeyup="trigger()"
+            class="input-field" id="psw"
+            type="password"
+            placeholder="Password"
+            name="psw"
+            re
+          />
+          <span class="showBtn">Show</span>
+        </div>
+        <div class="indicator">
+          <span class="weak"></span>
+          <!-- EC5252 -->
+          <span class="tobe"></span>
+          <!-- FFE48C -->
+          <span class="medium"></span>
+          <!-- 46C28E -->
+          <span class="strong"></span>
+          <!-- 208058 -->
+          <div>
+          <div class="text">Too weak</div></div>
+        </div>
+        
+        <div class="input-container checkCont">
+          <input
+            class="check"
+            type="checkbox"
+          />
+          <div class="info">I’m in for emails with exciting discounts and personalized recommendations</div>
+          
+        </div>
+        <input type="button" value="Sign Up" id="signup" onclick="signUp()" />
+        <div class="boxPolicy">
+          <div>By signing up, you agree to our <a href="https://www.udemy.com/terms/">Terms of Use</a> and <a href="https://www.udemy.com/terms/privacy/">Privacy Policy.</a></div>
+        </div>
+        <!-- <div class="form-group">or <a href="https://www.udemy.com/user/forgot-password/">Forgot Password</a></div> -->
+        <div class="form-group sign">Already have an account? <a href="https://www.udemy.com/join/login-popup/?locale=en_US&next=https%3A%2F%2Fwww.udemy.com%2Fjoin%2Flogin-popup%2F%3Flocale%3Den_US%26response_type%3Dhtml%26next%3Dhttps%253A%252F%252Fwww.udemy.com%252F&response_type=html"><b>Log In</b></a></div>
+        <!-- <div class="form-group log"><a><b>Log in with your organization</b></a></div> -->
+      </form>
+      <div class="flexBox">
+        <div class="box1">
+          <div>Top companies choose <a href="https://business.udemy.com/request-demo-in-mx/?user_type=visitor&utm_method=0&ref=footer-ad&locale=en_US&utm_source=marketplace"><b>Udemy for Business</b></a> to build in-demand career skills.
+        </div>
+      </div>
+        <div class="box2">
+          <div>
+            <img src="https://s.udemycdn.com/partner-logos/lyft-logo.svg" alt="lyft-logo">
+          </div>
+          <div>
+            <img src="https://s.udemycdn.com/partner-logos/adidas-logo.svg" alt="adidas-logo">
+          </div>
+          <div>
+            <img src="https://s.udemycdn.com/partner-logos/eventbrite-logo.svg" alt="eventbrite-logo">
+          </div>
+          <div>
+            <img src="https://s.udemycdn.com/partner-logos/surveymonkey-logo.svg" alt="surveymonkey-logo">
+          </div>
+          <div>
+            <img src="https://s.udemycdn.com/partner-logos/booking-logo.svg" alt="booking-logo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div>
+          <div id="links">
+              <ul>
+                <li><a href="">Udemy for Business</a></li>
+                <li><a href="">Teach on Udemy</a></li>
+                <li><a href="">Get the app</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Contact us</a></li>
+              </ul>
+              <ul>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Help and support</a></li>
+                <li><a href="">Affiliate</a></li>
+              </ul>
+              <ul>
+                <li><a href="">Terms</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Sitemap</a></li>
+                <li><a href="">Featured courses</a></li>
+              </ul>
+              <ul class="languageRight"> 
+               <li> <a href=""><img
+                        src="https://image.flaticon.com/icons/png/128/591/591788.png"
+                        alt="language logo" class="language"
+                      /> English</a></li>
+            
+            </div>
+      </div>
+      
+          <div class="logo">
+            <img
+              class="udemyLogo cursorPointer"
+              src="https://www.udemy.com/staticx/udemy/images/v6/logo-coral.svg"
+              alt="Udemy logo"
+            />
+            <div class="fooBox">&copy;2021 Udemy Inc.</div>
+          </div>
+          
+        </footer>
+  </body>
+  <script src="signup.js"></script>
+</html>
+

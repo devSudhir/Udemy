@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Udemy_clone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+  <link rel="stylesheet" href="../CSS/popup.css">
+  <link rel="stylesheet" href="../CSS/checkOut.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <button onclick="showfirst()" id="dropdownbtn"><i  class="fas fa-bars fa-2x"></i></button>
+          <!-- <a id="dropdownbtn" onclick="showfirst(event)" ><i  class="fas fa-bars fa-2x"></i></a> -->
+       
+        <div id="overlay">
+          <div id="first">
+            <div id="subfirst1">
+              <a href="login.html">Log In</a>
+              <a href="signup.html">Sign Up</a>
+            </div>
+            <hr />
+            <h3>Most Popular</h3>
+            <div id="subfirst2">
+              
+            </div>
+            <hr />
+            <h3>More from Udemy</h3>
+            <div id="subfirst3">
+              
+              <a href="#">Udemy for Business</a>
+              <a href="#">Get the app</a>
+              <a href="#">Invite friends</a>
+              <a href="#">Help</a>
+              <button>English</button>
+            </div>
+          </div>
+          <div id="second"></div>
+          <div id="closebtn" class="setZ">
+            <button>
+              <i class="far fa-times-circle fa-3x"></i>
+            </button>
+          </div>
+        </div>
+        <div class="logo"><a href="afterLogin.html">
+          <img class="udemyLogo cursorPointer" src="https://www.udemy.com/staticx/udemy/images/v6/logo-coral.svg"
+            alt="Udemy logo" /></a>
+        </div>
+        <div class="firstSection">
+          <ul>
+            <li><a class="navText"  href="#">Categories</a></li>
+            <li>
+              <div class="searchContainer">
+                <button class="searchButton cursorPointer">
+                  <i class="fa fa-search searchIcon"></i>
+                </button>
+                <input
+                  class="searchBox"
+                  type="search"
+                  name="search"
+                  placeholder="Search for anything"
+                />
+              </div>
+            </li>
+            <li class="navText1 hello">
+              <a class="navText dropdown"  href="udemy-Copy.html"><div>Udemy for Business</div><span class="dropdown-content"><b>Get your team access to over 5,500 top Udemy courses, anytime, anywhere.</b>
+                <div><button><b>Try Udemy for Business</b></button></div>
+              </span></a>
+              <li class="navText2 hello">
+              <a class="navText dropdown" href="techOnUdemy.html"><div>Teach On Udemy</div><span class="dropdown-content"><b>Turn what you know into an opportunity and reach millions around the world.</b>
+                <div><button class="btn"><b>Learn more</b></button></div></span></a>
+
+                <li class="navText2 hello">
+                    <a class="navText dropdown" href="techOnUdemy.html"><div>My Learning</div><span class="dropdown-content1"><b>Start learning from over 155,000 courses today.</b>
+                      <div><button><b>Browse now</b></button></div></span></a>
+              
+          </ul>
+        </div>
+        <div class="secondSection">
+            <ul>
+              <li>
+                <button class="cartBtn cursorPointer">
+                  <img
+                    class="cartIcon"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/WikiFont_uniE033_-_heart_-_red.svg/1024px-WikiFont_uniE033_-_heart_-_red.svg.png"
+                    alt="heart"
+                  />
+                </button>
+              </li>
+              
+              <li>
+                <button onclick="showCart()" class="cartBtn cursorPointer">
+                  <img
+                    class="cartIcon"
+                    src="https://image.flaticon.com/icons/png/128/628/628556.png"
+                    alt="cart"
+                  />
+                </button>
+              </li>
+              <li>
+                <button class="cartBtn cursorPointer">
+                  <img
+                    class="cartIcon"
+                    src="https://cdn2.iconfinder.com/data/icons/apple-inspire-white/100/Apple-47-128.png"
+                    alt="cart"
+                  />
+                </button>
+              </li>
+  
+              <li>
+                <button  class="btn-medium langIconbtn cursorPointer" id="btnUser">
+                 
+                </button>
+              </li>
+            </ul>
+          </div>
+        <div class="smallWindow">
+          <button class="searchButton cursorPointer">
+            <i class="fa fa-search searchIcon"></i>
+          </button>
+          <button class="cartBtn cursorPointer">
+            <img
+              class="cartIcon"
+              src="https://image.flaticon.com/icons/png/128/628/628556.png"
+              alt="cart"
+            />
+          </button>
+        </div>
+      </nav>
+    </header>
+    <div class="flex-center">
+        <div class="flexCheck">
+            <h2>Checkout</h2>
+            <div>Billing Address</div>
+            <form>
+                <div class="flex_Box">
+                <div class="conSel">
+                <div class="oncon">Country</div>
+                <div>
+                <select id="country">
+                    <option>India</option>
+                </select></div>
+                </div>
+                <div class="conSel">
+                    <div class="oncon">State/ Union Territiry</div>
+                    <div>
+                        <select  name="" id="country">
+                            <option>Please select...</option>
+                        <option>Andaman and Nicobar Islands</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Arunachal Pradesh</option>
+                        <option>Assam</option>
+                        <option>Bihar</option>
+                        <option>Chandigarh</option>
+                        <option>Chhattisgarh</option>
+                        <option>Dadra and Nagar Haveli and Daman and Diu</option>
+                        <option>Delhi</option>
+                        <option>Goa</option>
+                        <option>Gujarat</option>
+                        <option>Haryana</option>
+                        <option>Himachal Pradesh</option>
+                        <option>Jammu and Kashmir</option>
+                        <option>Jharkhand</option>
+                        <option>Karnataka</option>
+                        <option>Ladakh</option>
+                        <option>Lakshadweep</option>
+                        <option>Uttarakhand</option>
+                        <option>Kerala</option>
+                        <option>Madhya Pradesh</option>
+                        <option>Maharashtra</option>
+                        <option>Manipur</option>
+                        <option>Uttar Pradesh</option>
+                        <option>Meghalaya</option>
+                        <option>Mizoram</option>
+                        <option>Nagaland</option>
+                        <option>Odisha</option>
+                        <option>Puducherry</option>
+                        <option>Punjab</option>
+                        <option>Rajasthan</option>
+                        <option>Sikkim</option>
+                        <option>Tamil Nadu</option>
+                        <option>Telangana</option>
+                        <option>Tripura</option>
+                        <option>West Bengal</option>
+                    </select></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="radio" id="card"value="card">
+                    <label for="card">Credit or Debit Card</label><br>
+                    <input type="radio" id="nBank" name="nBank" value="nBank">
+                    <label for="nBank">Pay with Net Banking</label><br>
+                    <input type="radio" id="upi" name="upi" value="upi">
+                    <label for="upi">Pay with UPI</label><br>
+                    <input type="radio" id="payTm" name="payTm" value="payTm">
+                    <label for="payTm">Pay with PayTm</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" placeholder="Name on Card" id="name">
+                    <input type="number" placeholder="Card Number" id="cNum">
+                    <div class="calCode">
+                        <div class="calender">
+                            <div>
+                                <select id="month">
+                                    <option >MM</option>
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                    <option>04</option>
+                                    <option>05</option>
+                                    <option>06</option>
+                                    <option>07</option>
+                                    <option>08</option>
+                                    <option>09</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                </select>
+                            </div>
+                            <div>
+                                <select id="year">
+                                    <option >YYYY</option>
+                                    <option>2021</option>
+                                    <option>2022</option>
+                                    <option>2023</option>
+                                    <option>2024</option>
+                                    <option>2025</option>
+                                    <option>2026</option>
+                                    <option>2027</option>
+                                    <option>2028</option>
+                                    <option>2029</option>
+                                    <option>2030</option>
+                                    <option>2031</option>
+                                    <option>2032</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="number" id="cvv" placeholder="Security Code">
+                        </div>
+                        
+                    </div>
+                    <div>
+                        <input type="checkbox" id="check">    Remember this Card</input>
+                    </div>
+                    <div class="tool">
+                        <img src="https://www.vippng.com/png/detail/35-355987_facebook-lock-icon-png-download-secure-svg.png" alt="lock" class="secure">
+                    </div>
+                </div>
+            </form>
+            <div class="order">
+                <h2>Order Details</h2>
+            </div>
+
+
+        </div>
+        <div class="flexSum">
+            <h2>Summary</h2>
+            <div class="price-flex-boxes">
+              <span>Total Price:</span>
+              <span id="all_total_price"></span>
+            </div>
+            <div class="price-flex-boxes">
+              <span>Discount Price:</span>
+              <span id="discounted_price"></span>
+            </div>
+            <hr>
+            <div class="price-flex-boxes" id="total_in_bold">
+              <span>Total:</span>
+              <span id="total"></span>
+            </div>
+            <p>Udemy is required by law to collect applicable transaction taxes for purchases made in certain tax jurisdictions.</p>
+            <p>By completing your purchase you agree to these Terms of Service.</p>
+            <button onclick="shoppingComplete()">Complete Payment</button>
+            <h1 id="notification"></h1>
+        </div>
+    </div>
+  </body>
+  <script src="../Scripts/checkOut.js"></script>
+
+</html>

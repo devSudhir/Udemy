@@ -1,0 +1,150 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.banner {
+  width: 100%;
+  height: 500px;
+}
+.inBox {
+  position: absolute;
+  left: 10%;
+  top: 210px;
+  width: 379px;
+  height: 200px;
+  /* border: 1px solid green; */
+  color: white;
+}
+.smallBox {
+  width: 80%;
+  height: 110px;
+  position: absolute;
+  top: 70px;
+  /* border: 1px solid red; */
+}
+.smallBox div {
+  font-size: 18px;
+  margin-bottom: 18px;
+  font-family: "Mukta", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+}
+.inBox h1 {
+  font-size: 44px;
+  font-family: "Mukta", sans-serif;
+  font-weight: 900;
+  margin: 0px;
+}
+#button {
+  width: 300px;
+  height: 48px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ec5252;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+.reason,
+.begin {
+  text-align: center;
+  color: rgb(58, 57, 57);
+  font-size: 44px;
+  font-family: "Mukta", sans-serif;
+  font-weight: 900;
+  margin-top: 180px;
+}
+.containBox {
+  margin: 10px auto;
+  width: 85%;
+  height: 230px;
+  /* border: 1px solid; */
+  display: flex;
+}
+.containBox div {
+  width: 351px;
+  height: 230px;
+  /* border: 1px solid; */
+  text-align: center;
+  font-size: 18px;
+}
+.threeBox,
+.threeBox1 {
+  width: 350px;
+  /* border: 1px solid; */
+  margin-left: 117px;
+  text-align: center;
+  font-size: 18px;
+}
+.threeBox1 {
+  margin-left: 0px;
+}
+.threeBox h3,
+.threeBox1 h3 {
+  line-height: 0px;
+  margin-bottom: 0px;
+}
+.threeBox h3,
+.threeBox1 h3 {
+  margin-bottom: 0px;
+}
+.threeBox p,
+.threeBox1 p {
+  margin-top: 15px;
+  line-height: 20px;
+}
+.blackCont {
+  width: 100%;
+  height: 300px;
+  background-color: #1e1e1c;
+  margin-top: 80px;
+  display: flex;
+}
+.box,
+.box1 {
+  width: 200px;
+  height: 300px;
+  /* border: 1px solid white; */
+  margin-left: 30px;
+  text-align: center;
+  justify-content: center;
+  color: white;
+}
+.box1 {
+  margin-left: 12%;
+  text-align: center;
+  justify-content: center;
+}
+.center {
+  margin-top: 112px;
+}
+.center h1 {
+  font-size: 50px;
+  margin: 0px;
+}
+.center p {
+  font-size: 18px;
+  margin: 0px;
+}
+.begin {
+  margin-top: 80px;
+}
+.buttons {
+  width: 800px;
+  border-bottom: 1px solid gray;
+  margin: auto;
+}
+.buttons button {
+  width: 264px;
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  background: none;
+  border: none;
+  border-bottom: 1px solid gray;
+  color: gray;
+  cursor: pointer;
+}
+.buttons button:active {
+  color: red;
+}

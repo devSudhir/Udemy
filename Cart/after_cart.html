@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Udemy_clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="../CSS/afterCart.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="logo"><a href="../AfterLogin/afterLogin.html">
+                    <img class="udemyLogo cursorPointer"
+                        src="https://www.udemy.com/staticx/udemy/images/v6/logo-coral.svg" alt="Udemy logo" /></a>
+            </div>
+            <div class="firstSection">
+                <ul>
+                    <li><a class="navText" href="#">Categories</a></li>
+                    <li>
+                        <div class="searchContainer">
+                            <button class="searchButton cursorPointer">
+                                <i class="fa fa-search searchIcon"></i>
+                            </button>
+                            <input class="searchBox" type="search" name="search" placeholder="Search..."
+                                placeholder="Search for anything" />
+                        </div>
+                    </li>
+                    <li class="navText1 hello">
+                        <a class="navText dropdown" href="../Additional Pages/udemy-Copy.html">
+                            <div>Udemy for Business</div><span class="dropdown-content"><b>Get your team access to over
+                                    5,500 top Udemy courses, anytime, anywhere.</b>
+                                <div><button><b>Try Udemy for Business</b></button></div>
+                            </span>
+                        </a>
+                    <li class="navText2 hello">
+                        <a class="navText dropdown" href="../Additional Pages/techOnUdemy.html">
+                            <div>Teach On Udemy</div><span class="dropdown-content"><b>Turn what you know into an
+                                    opportunity and reach millions around the world.</b>
+                                <div><button class="btn"><b>Learn more</b></button></div>
+                            </span>
+                        </a>
+
+                    <li class="navText2 hello">
+                        <a class="navText dropdown" href="../Additional Pages/techOnUdemy.html">
+                            <div>My Learning</div><span class="dropdown-content1"><b>Start learning from over 155,000
+                                    courses today.</b>
+                                <div><button><b>Browse now</b></button></div>
+                            </span>
+                        </a>
+                </ul>
+            </div>
+
+            <div class="secondSection">
+                <ul>
+                    <li>
+                        <button class="cartBtn cursorPointer">
+                            <img class="cartIcon"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/WikiFont_uniE033_-_heart_-_red.svg/1024px-WikiFont_uniE033_-_heart_-_red.svg.png"
+                                alt="heart" />
+                        </button>
+                    </li>
+
+                    <li>
+                        <button onclick="showCart()" class="cartBtn cursorPointer">
+                            <img class="cartIcon" src="https://image.flaticon.com/icons/png/128/628/628556.png"
+                                alt="cart" />
+                        </button>
+                        <span id="noOfCartItems"></span>
+                    </li>
+                    <li>
+                        <button class="cartBtn cursorPointer">
+                            <img class="cartIcon"
+                                src="https://cdn2.iconfinder.com/data/icons/apple-inspire-white/100/Apple-47-128.png"
+                                alt="cart" />
+                        </button>
+                    </li>
+
+                    <li>
+                        <!-- <button class="btn-medium langIconbtn cursorPointer" id="btnUser"> -->
+                    <li>
+                        <a class="btn-medium langIconbtn cursorPointer dropdown1">
+                            <div class="sizeM">
+                                <div id="btnUser"></div>
+                            </div><span class="dropdown-content1"><b>Click On the button Below to Logging Out</b>
+                                <div><button onclick="window.location='../Landing page/index.html'"
+                                        class="btnLogout"><b>LogOut</b></button></div>
+                            </span>
+                        </a>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="smallWindow">
+                <button class="searchButton cursorPointer">
+                    <i class="fa fa-search searchIcon"></i>
+                </button>
+                <button class="cartBtn cursorPointer">
+                    <img class="cartIcon" src="https://image.flaticon.com/icons/png/128/628/628556.png" alt="cart" />
+                </button>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="mainBox">
+            <div class="shop">Shopping Cart</div>
+        </div>
+        <div class="countOfItemsDiv">
+            <div id="noOfItemsInshop"></div>
+        </div>
+        <div id="allCartItems">
+
+            <div id="showCartItems"></div>
+            <div id="checkoutDiv"></div>
+            <h2>Save for later</h2>
+            <div id="saveForLater">
+
+            </div>
+            <h2>Recently Wishlisted</h2>
+            <div id="removedWish">
+                <p>You haven't added any courses to your wishlist.</p>
+            </div>
+        </div>
+        <!-- <div class="save-wish"> -->
+        <!-- <h2>Save for later</h2>
+        <div id="saveForLater">
+            <p>You haven't saved any courses for later.</p>
+        </div>
+          <h2>Recently Wishlisted</h2>
+        <div id="removedWish">
+           <p>You haven't added any courses to your wishlist.</p>
+        </div> -->
+        <!-- </div> -->
+        <div class="main-slider-2-hp slideCourses">
+            <span>You may also like</span>
+            <div class="main-slider-students-view">
+                <button onclick="plusSlideStud(-1)" href="#" class="previous round">&#8249;</button>
+                <div class="slides-2 fade-2"></div>
+                <div class="slides-2 fade-2"></div>
+                <div class="slides-2 fade-2"></div>
+                <div class="slides-2 fade-2"></div>
+                <div class="slides-2 fade-2"></div>
+                <button onclick="plusSlideStud(1)" href="#" class="next round">&#8250;</button>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="flexBox">
+            <div class="box1">
+                <div>Top companies choose <a
+                        href="https://business.udemy.com/request-demo-in-mx/?user_type=visitor&utm_method=0&ref=footer-ad&locale=en_US&utm_source=marketplace"><b>Udemy
+                            for Business</b></a> to build in-demand career skills.
+                </div>
+            </div>
+            <div class="box2">
+                <div>
+                    <img src="https://s.udemycdn.com/partner-logos/lyft-logo.svg" alt="lyft-logo">
+                </div>
+                <div>
+                    <img src="https://s.udemycdn.com/partner-logos/adidas-logo.svg" alt="adidas-logo">
+                </div>
+                <div>
+                    <img src="https://s.udemycdn.com/partner-logos/eventbrite-logo.svg" alt="eventbrite-logo">
+                </div>
+                <div>
+                    <img src="https://s.udemycdn.com/partner-logos/surveymonkey-logo.svg" alt="surveymonkey-logo">
+                </div>
+                <div>
+                    <img src="https://s.udemycdn.com/partner-logos/booking-logo.svg" alt="booking-logo">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="links">
+            <ul>
+                <li><a href="">Udemy for Business</a></li>
+                <li><a href="">Teach on Udemy</a></li>
+                <li><a href="">Get the app</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Contact us</a></li>
+            </ul>
+            <ul>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Help and support</a></li>
+                <li><a href="">Affiliate</a></li>
+            </ul>
+            <ul>
+                <li><a href="">Terms</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Sitemap</a></li>
+                <li><a href="">Featured courses</a></li>
+            </ul>
+            <ul class="languageRight">
+                <li> <a href=""> <img src="https://image.flaticon.com/icons/png/128/591/591788.png"
+                            alt="language logo" /> English</a></li>
+
+        </div>
+
+    </section>
+    <footer>
+        <div class="logo">
+            <img class="udemyLogo cursorPointer" src="https://www.udemy.com/staticx/udemy/images/v6/logo-coral.svg"
+                alt="Udemy logo" />
+        </div>
+        <div>&copy;2021 Udemy Inc.</div>
+    </footer>
+</body>
+<script src="after_cart.js"></script>
+<script src="afterCart.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
+</html>
