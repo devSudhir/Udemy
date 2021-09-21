@@ -469,6 +469,9 @@ header {
   flex-direction: column;
 }
 
+#showCartItems > div{
+  width:60vw;
+}
 #showCartItems > div,
 #saveForLater > div,
 #removedWish > div {
